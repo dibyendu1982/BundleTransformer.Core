@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Users\dstiwary\source\repos\MvcSass\SassExperiment\bin\app.publish\bin\BundleTransformer.Core.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{577FF4C1-D216-4EA3-99CC-5DC6696DB505}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>BundleTransformer.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <ApplicationVersion>1.10.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>BundleTransformer.Core</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AdvancedStringBuilder">
+      <HintPath>lib\AdvancedStringBuilder.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Optimization">
+      <HintPath>lib\System.Web.Optimization.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssetNodeMatchBase.cs" />
+    <Compile Include="BundleTransformerContext.cs" />
+    <Compile Include="CommonRegExps.cs" />
+    <Compile Include="CssNodeMatch.cs" />
+    <Compile Include="CssNodeType.cs" />
+    <Compile Include="EmptyValueException.cs" />
+    <Compile Include="IBundleTransformerContext.cs" />
+    <Compile Include="Validators\InvalidAssetTypesException.cs" />
+    <Compile Include="Validators\IValidator.cs" />
+    <Compile Include="Validators\ScriptAssetTypesValidator.cs" />
+    <Compile Include="Validators\StyleAssetTypesValidator.cs" />
+    <Compile Include="Utilities\CharExtensions.cs" />
+    <Compile Include="Utilities\InterlockedStatedFlag.cs" />
+    <Compile Include="Utilities\SourceCodeNavigator.cs" />
+    <Compile Include="Utilities\SourceCodeNodeCoordinates.cs" />
+    <Compile Include="Utilities\StatedFlag.cs" />
+    <Compile Include="Utilities\StringExtensions.cs" />
+    <Compile Include="Utilities\Utils.cs" />
+    <Compile Include="Translators\AssetTranslationException.cs" />
+    <Compile Include="Translators\ITranslator.cs" />
+    <Compile Include="Translators\NullTranslator.cs" />
+    <Compile Include="Translators\TranslatorNotFoundException.cs" />
+    <Compile Include="Translators\TranslatorWithNativeMinificationBase.cs" />
+    <Compile Include="Transformers\ITransformer.cs" />
+    <Compile Include="Transformers\ScriptTransformer.cs" />
+    <Compile Include="Transformers\StyleTransformer.cs" />
+    <Compile Include="Transformers\Tracer.cs" />
+    <Compile Include="Transformers\TransformerBase.cs" />
+    <Compile Include="Resources\Strings.cs" />
+    <Compile Include="Resolvers\CustomBundleResolver.cs" />
+    <Compile Include="PostProcessors\AssetPostProcessingException.cs" />
+    <Compile Include="PostProcessors\IPostProcessor.cs" />
+    <Compile Include="PostProcessors\NullPostProcessor.cs" />
+    <Compile Include="PostProcessors\PostProcessorBase.cs" />
+    <Compile Include="PostProcessors\PostProcessorNotFoundException.cs" />
+    <Compile Include="PostProcessors\UrlRewritingCssPostProcessor.cs" />
+    <Compile Include="Orderers\NullOrderer.cs" />
+    <Compile Include="Minifiers\AssetMinificationException.cs" />
+    <Compile Include="Minifiers\IMinifier.cs" />
+    <Compile Include="Minifiers\MinifierNotFoundException.cs" />
+    <Compile Include="Minifiers\NullMinifier.cs" />
+    <Compile Include="HttpHandlers\AssetHandlerBase.cs" />
+    <Compile Include="HttpHandlers\CssAssetHandler.cs" />
+    <Compile Include="HttpHandlers\JsAssetHandler.cs" />
+    <Compile Include="HttpHandlers\ScriptAssetHandlerBase.cs" />
+    <Compile Include="HttpHandlers\StyleAssetHandlerBase.cs" />
+    <Compile Include="Helpers\UrlHelpers.cs" />
+    <Compile Include="Filters\CssFileExtensionsFilter.cs" />
+    <Compile Include="Filters\FileExtensionsFilterBase.cs" />
+    <Compile Include="Filters\IFilter.cs" />
+    <Compile Include="Filters\JsFileExtensionsFilter.cs" />
+    <Compile Include="Filters\ScriptDuplicateAssetsFilter.cs" />
+    <Compile Include="Filters\ScriptUnnecessaryAssetsFilter.cs" />
+    <Compile Include="Filters\StyleDuplicateAssetsFilter.cs" />
+    <Compile Include="Filters\StyleUnnecessaryAssetsFilter.cs" />
+    <Compile Include="Filters\UnnecessaryAssetsFilterBase.cs" />
+    <Compile Include="FileSystem\CommonRelativePathResolver.cs" />
+    <Compile Include="FileSystem\FileSystemContext.cs" />
+    <Compile Include="FileSystem\IFileSystemContext.cs" />
+    <Compile Include="FileSystem\IRelativePathResolver.cs" />
+    <Compile Include="FileSystem\IVirtualFileSystemWrapper.cs" />
+    <Compile Include="FileSystem\VirtualFileSystemWrapper.cs" />
+    <Compile Include="Constants\AssetTypeCode.cs" />
+    <Compile Include="Constants\Common.cs" />
+    <Compile Include="Constants\ContentType.cs" />
+    <Compile Include="Constants\FileExtension.cs" />
+    <Compile Include="Constants\MinifierName.cs" />
+    <Compile Include="Constants\PostProcessorName.cs" />
+    <Compile Include="Constants\TranslatorName.cs" />
+    <Compile Include="Configuration\AssetHandlerSettings.cs" />
+    <Compile Include="Configuration\AssetProcessorRegistrationBase.cs" />
+    <Compile Include="Configuration\AssetSettingsBase.cs" />
+    <Compile Include="Configuration\ConfigurationContext.cs" />
+    <Compile Include="Configuration\CoreSettings.cs" />
+    <Compile Include="Configuration\FileExtensionRegistration.cs" />
+    <Compile Include="Configuration\FileExtensionRegistrationCollection.cs" />
+    <Compile Include="Configuration\IConfigurationContext.cs" />
+    <Compile Include="Configuration\JsEngineSettings.cs" />
+    <Compile Include="Configuration\MinifierRegistration.cs" />
+    <Compile Include="Configuration\MinifierRegistrationCollection.cs" />
+    <Compile Include="Configuration\PostProcessorRegistration.cs" />
+    <Compile Include="Configuration\PostProcessorRegistrationCollection.cs" />
+    <Compile Include="Configuration\ScriptSettings.cs" />
+    <Compile Include="Configuration\StyleSettings.cs" />
+    <Compile Include="Configuration\TranslatorRegistration.cs" />
+    <Compile Include="Configuration\TranslatorRegistrationCollection.cs" />
+    <Compile Include="Combiners\CombinerBase.cs" />
+    <Compile Include="Combiners\ICombiner.cs" />
+    <Compile Include="Combiners\ScriptCombiner.cs" />
+    <Compile Include="Combiners\StyleCombiner.cs" />
+    <Compile Include="Bundles\CustomScriptBundle.cs" />
+    <Compile Include="Bundles\CustomStyleBundle.cs" />
+    <Compile Include="Builders\NullBuilder.cs" />
+    <Compile Include="Assets\Asset.cs" />
+    <Compile Include="Assets\AssetContextBase.cs" />
+    <Compile Include="Assets\Dependency.cs" />
+    <Compile Include="Assets\DependencyCollection.cs" />
+    <Compile Include="Assets\FileExtensionMapping.cs" />
+    <Compile Include="Assets\FileExtensionMappingCollection.cs" />
+    <Compile Include="Assets\IAsset.cs" />
+    <Compile Include="Assets\IAssetContext.cs" />
+    <Compile Include="Assets\ScriptContext.cs" />
+    <Compile Include="Assets\StyleContext.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Strings.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
